@@ -1,0 +1,15 @@
+name: Keep Alive ModelScope Space
+
+on:
+  schedule:
+    # 每 60 分钟运行一次（UTC 时间）
+    - cron: "*/60 * * * *"
+  workflow_dispatch: # 允许手动触发
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping ModelScope Space
+        run: |
+          curl -m 10 -s https://www.modelscope.cn/studios/pelou110/QwenPaw > /dev/null || true
