@@ -2,8 +2,8 @@ name: Keep Alive ModelScope Space
 
 on:
   schedule:
-    # 每 61 分钟运行一次（UTC 时间）
-    - cron: "*/61 * * * *"
+    # 每 91 分钟运行一次（UTC 时间）
+    - cron: "*/91 * * * *"
   workflow_dispatch: # 允许手动触发
 
 jobs:
